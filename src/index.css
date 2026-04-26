@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-wildflower-pink: #f472b6;
+  --color-wildflower-purple: #a78bfa;
+  --color-wildflower-yellow: #fbbf24;
+  --color-wildflower-blue: #60a5fa;
+  --color-wildflower-green: #34d399;
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Montserrat", sans-serif;
+}
+
+:root {
+  background-color: white;
+  color: #333;
+}
+
+body {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Playfair Display', serif;
+}
+
+/* 
+  LIVELY STATIC BACKGROUND
+  Using a professional wildflower pattern that is safe for mobile.
+*/
+.wildflower-static-bg {
+  background-color: #ffffff;
+  background-image: 
+    linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)),
+    url("https://images.unsplash.com/photo-1508784411316-02b8cd4d3a3a?q=80&w=2000&auto=format&fit=crop");
+  background-size: 600px;
+  background-attachment: fixed;
+  background-repeat: repeat;
+}
+
+/* Let's try to get that "neatly separated" look with a repeating pattern if we find a better tile, 
+   but for now, a fixed full-screen realistic meadow is usually what people mean by "realistic".
+   However, since the user wants it to look like a "wall", we'll use a high-density floral shot.
+*/
+
+.section-padding {
+  @apply py-20 px-6 max-w-6xl mx-auto;
+}
+
+.photo-placeholder {
+  @apply bg-white/40 backdrop-blur-sm border-2 border-dashed border-gray-200 rounded-lg flex items-center justify-center relative overflow-hidden min-h-0;
+  transition: all 0.3s ease;
+}
+
+.photo-placeholder:hover {
+  @apply bg-white/60 border-wildflower-pink/30;
+}
+
+section {
+  @apply relative;
+  background-color: transparent !important;
+}
+
+/* Add a clean white card look to specific containers within sections */
+.content-card {
+  @apply bg-white/95 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-gray-100/50 rounded-[2.5rem] p-8 md:p-12 transition-all duration-500;
+}
+
+.content-card:hover {
+  @apply shadow-[0_20px_50px_rgba(0,0,0,0.08)] transform -translate-y-1;
+}
+
+/* Add a subtle fade between sections if needed, but keeping it clean for now */
