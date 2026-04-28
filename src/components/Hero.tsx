@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import PhotoPlaceholder from './PhotoPlaceholder';
 import Countdown from './Countdown';
 
 const Hero: React.FC = () => {
@@ -25,9 +24,10 @@ const Hero: React.FC = () => {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="w-full md:w-[22%] order-2 md:order-1"
               >
-                <PhotoPlaceholder 
-                  className="w-full aspect-[3/4] shadow-2xl rounded-3xl border-white border-[6px] md:border-[10px]" 
-                  label="Portrait Prenup"
+                <img 
+                  src="/hero-left.jpg" 
+                  alt="Prenup Portrait"
+                  className="w-full aspect-[4/5] md:aspect-[3/4] object-cover object-center shadow-2xl rounded-3xl border-white border-[6px] md:border-[10px]"
                 />
               </motion.div>
 
@@ -38,9 +38,10 @@ const Hero: React.FC = () => {
                 transition={{ duration: 0.8 }}
                 className="w-full md:w-[50%] order-1 md:order-2"
               >
-                <PhotoPlaceholder 
-                  className="w-full aspect-video shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-[2.5rem] border-white border-[8px] md:border-[15px]" 
-                  label="Our Favorite Moment"
+                <img 
+                  src="/hero-center.jpg" 
+                  alt="Genex & Keziah Centerpiece"
+                  className="w-full aspect-[4/3] md:aspect-video object-cover object-[center_35%] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-[2.5rem] border-white border-[8px] md:border-[15px]"
                 />
               </motion.div>
 
@@ -51,9 +52,10 @@ const Hero: React.FC = () => {
                 transition={{ delay: 0.3, duration: 0.8 }}
                 className="w-full md:w-[22%] order-3 md:order-3"
               >
-                <PhotoPlaceholder 
-                  className="w-full aspect-[3/4] shadow-2xl rounded-3xl border-white border-[6px] md:border-[10px]" 
-                  label="Portrait Prenup"
+                <img 
+                  src="/hero-right.jpg" 
+                  alt="Prenup Portrait"
+                  className="w-full aspect-[4/5] md:aspect-[3/4] object-cover object-center shadow-2xl rounded-3xl border-white border-[6px] md:border-[10px]"
                 />
               </motion.div>
             </div>

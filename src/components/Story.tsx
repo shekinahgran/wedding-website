@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import PhotoPlaceholder from './PhotoPlaceholder';
 
 const Story: React.FC = () => {
   return (
@@ -19,7 +18,11 @@ const Story: React.FC = () => {
             viewport={{ once: true }}
             className="w-full md:w-1/2"
           >
-            <PhotoPlaceholder label="The Day We Met" className="w-full rounded-2xl aspect-video md:aspect-square" />
+            <img 
+              src="/story-1.jpg" 
+              alt="The Day We Met"
+              className="w-full rounded-2xl aspect-[4/5] md:aspect-square object-cover object-[center_20%] shadow-lg"
+            />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +48,11 @@ const Story: React.FC = () => {
             viewport={{ once: true }}
             className="w-full md:w-1/2"
           >
-            <PhotoPlaceholder label="A Memorable Adventure" className="w-full rounded-2xl aspect-video md:aspect-square" />
+            <img 
+              src="/story-2.jpg" 
+              alt="A Memorable Adventure"
+              className="w-full rounded-2xl aspect-[4/5] md:aspect-square object-cover object-[center_20%] shadow-lg"
+            />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -71,7 +78,11 @@ const Story: React.FC = () => {
             viewport={{ once: true }}
             className="w-full md:w-1/2"
           >
-            <PhotoPlaceholder label="The Proposal" className="w-full rounded-2xl aspect-video md:aspect-square" />
+            <img 
+              src="/story-3.jpg" 
+              alt="The Proposal"
+              className="w-full rounded-2xl aspect-[4/5] md:aspect-square object-cover object-[center_20%] shadow-lg"
+            />
           </motion.div>
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
