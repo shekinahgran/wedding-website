@@ -27,7 +27,7 @@ const Hero: React.FC = () => {
                 <img 
                   src="/hero-left.jpg" 
                   alt="Prenup Portrait"
-                  className="w-full aspect-[4/5] md:aspect-[3/4] object-cover object-center shadow-2xl rounded-3xl border-white border-[6px] md:border-[10px]"
+                  className="w-full aspect-[4/5] md:aspect-[3/4] object-cover object-[center_80%] shadow-2xl rounded-3xl border-white border-[6px] md:border-[10px]"
                 />
               </motion.div>
 
@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
                 <img 
                   src="/hero-center.jpg" 
                   alt="Genex & Keziah Centerpiece"
-                  className="w-full aspect-[4/3] md:aspect-video object-cover object-[center_35%] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-[2.5rem] border-white border-[8px] md:border-[15px]"
+                  className="w-full aspect-[4/3] md:aspect-video object-cover object-[center_37%] shadow-[0_35px_60px_-15px_rgba(0,0,0,0.3)] rounded-[2.5rem] border-white border-[8px] md:border-[15px]"
                 />
               </motion.div>
 

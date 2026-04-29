@@ -1,5 +1,4 @@
 import React from 'react';
-import PhotoPlaceholder from './PhotoPlaceholder';
 
 const RSVP: React.FC = () => {
   // Since the user provided an edit link, I'll use a placeholder embed or the user's link if it works.
@@ -31,7 +30,11 @@ const RSVP: React.FC = () => {
 
       <div className="mt-12 md:mt-16 text-center px-4">
         <p className="font-serif italic text-xl md:text-2xl text-gray-700 mb-6 md:mb-8">Thank you for being part of our journey!</p>
-        <PhotoPlaceholder label="Final Thank You" className="max-w-[200px] md:max-w-xs mx-auto h-40 md:h-48 rounded-2xl shadow-md" />
+        <img 
+          src="/thank-you.jpg" 
+          alt="Thank You"
+          className="max-w-[280px] md:max-w-md mx-auto aspect-[5/4] object-cover object-[center_15%] rounded-2xl shadow-xl border-white border-5" 
+        />
       </div>
     </section>
   );
