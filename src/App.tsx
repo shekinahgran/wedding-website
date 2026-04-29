@@ -7,6 +7,7 @@ import RSVP from './components/RSVP';
 import Attire from './components/Attire';
 import Entourage from './components/Entourage';
 import WildflowerWall from './components/WildflowerWall';
+import { motion } from 'framer-motion';
 
 function App() {
   return (
@@ -24,6 +25,37 @@ function App() {
             <Story />
             <Entourage />
             <Details />
+
+            {/* Transition Bridge: Hugging Photos */}
+            <section className="py-16 md:py-24 px-6 max-w-3xl mx-auto overflow-hidden">
+              <div className="flex flex-col md:flex-row items-center justify-center gap-12 md:gap-16">
+                <motion.div 
+                  initial={{ opacity: 0, x: -20, rotate: -4 }}
+                  whileInView={{ opacity: 1, x: 0, rotate: -2 }}
+                  viewport={{ once: true }}
+                  className="w-full max-w-[280px] md:max-w-[300px]"
+                >
+                  <img 
+                    src="/hug-1.jpg" 
+                    alt="Genex and Keziah"
+                    className="w-full aspect-[3/4] object-cover object-[center_20%] rounded-[1.5rem] shadow-2xl border-white border-[8px]"
+                  />
+                </motion.div>
+                <motion.div 
+                  initial={{ opacity: 0, x: 20, rotate: 4 }}
+                  whileInView={{ opacity: 1, x: 0, rotate: 2 }}
+                  viewport={{ once: true }}
+                  className="w-full max-w-[280px] md:max-w-[300px] md:mt-20"
+                >
+                  <img 
+                    src="/hug-2.jpg" 
+                    alt="Genex and Keziah"
+                    className="w-full aspect-[3/4] object-cover object-[center_20%] rounded-[1.5rem] shadow-2xl border-white border-[8px]"
+                  />
+                </motion.div>
+              </div>
+            </section>
+
             <Attire />
             <FAQ />
             <RSVP />
