@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Story from './components/Story';
@@ -7,11 +8,32 @@ import RSVP from './components/RSVP';
 import Attire from './components/Attire';
 import Entourage from './components/Entourage';
 import WildflowerWall from './components/WildflowerWall';
-import { motion } from 'framer-motion';
+import RoleModal from './components/RoleModal';
+import { motion, AnimatePresence } from 'framer-motion';
 
 function App() {
+  const [userRole, setUserRole] = useState<string | null>(null);
+
+  useEffect(() => {
+    const savedRole = localStorage.getItem('userRole');
+    if (savedRole) {
+      setUserRole(savedRole);
+    }
+  }, []);
+
+  const handleRoleSelect = (role: string) => {
+    setUserRole(role);
+    localStorage.setItem('userRole', role);
+  };
+
   return (
     <div className="min-h-screen text-gray-800 selection:bg-wildflower-pink selection:text-white relative">
+      <AnimatePresence>
+        {!userRole && (
+          <RoleModal onSelect={handleRoleSelect} />
+        )}
+      </AnimatePresence>
+
       {/* Static Flower Wall is the base layer */}
       <WildflowerWall />
 
@@ -24,7 +46,7 @@ function App() {
           <div className="relative">
             <Story />
             <Entourage />
-            <Details />
+            <Details role={userRole} />
 
             {/* Transition Bridge: Hugging Photos */}
             <section className="py-16 md:py-24 px-6 max-w-3xl mx-auto overflow-hidden">

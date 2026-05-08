@@ -68,6 +68,9 @@ const Entourage: React.FC = () => {
         { label: 'Candle Sponsors', name: 'Mr. Mardhe & Mrs. Faith Mendoza', sublabel: '“To kindle the flame of our union”' },
         { label: 'Veil Sponsors', name: 'Mr. Darwin Jay & Mrs. Cherry Belle Mojar', sublabel: '“To cover us in grace and devotion”' },
         { label: 'Cord Sponsors', name: 'Mr. Sunrex Aseniero & Ms. Kaye Zelle Saromines', sublabel: '“To bind us in faithful love”' },
+        { label: 'Bible Bearer', name: 'John Ardem Matriano', sublabel: '“To bear the foundation of our faith”' },
+        { label: 'Coin Bearer', name: 'Jhowell Dineros', sublabel: '“To signify abundance and faithful partnership”' },
+        { label: 'Ring Bearer', name: 'Jayson Sevilla', sublabel: '“To carry the symbol of our eternal promise”' },
       ]
     },
     {
@@ -158,14 +161,20 @@ const Entourage: React.FC = () => {
                   })}
                 </div>
               ) : group.isSymbol ? (
-                <div className="space-y-4 max-w-lg mx-auto">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-4 max-w-3xl mx-auto">
                     {group.members.map((item, i) => {
                         const pair = item as MemberPair;
                         return (
-                            <div key={i}>
-                                <p className="text-[9px] text-gray-400 italic mb-0.5">{pair.sublabel}</p>
-                                <h4 className="text-[8px] uppercase tracking-widest text-gray-500 font-bold">{pair.label}</h4>
-                                <p className="text-base text-gray-800 font-serif italic leading-tight">{pair.name}</p>
+                            <div key={i} className="space-y-1 flex flex-col items-center">
+                                <p className="text-[10px] md:text-xs text-gray-500 italic leading-tight">
+                                    {pair.sublabel}
+                                </p>
+                                <h4 className="text-[8px] md:text-[9px] uppercase tracking-widest text-gray-400 font-bold">
+                                    ({pair.label})
+                                </h4>
+                                <p className="text-base md:text-lg text-gray-800 font-serif italic leading-tight">
+                                    {pair.name}
+                                </p>
                             </div>
                         )
                     })}
@@ -192,23 +201,11 @@ const Entourage: React.FC = () => {
           ))}
           
           <div className="pt-6 border-t border-gray-100 mt-6">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-start max-w-2xl mx-auto">
-              <div className="space-y-4">
-                <h3 className="text-wildflower-pink font-serif text-xl italic">Bearers</h3>
-                <div className="grid grid-cols-1 gap-3 text-gray-800 font-serif italic">
-                  {['Bible Bearer', 'Coin Bearer', 'Ring Bearer'].map((label, idx) => (
-                    <div key={label}>
-                        <p className="text-[8px] text-gray-400 uppercase tracking-widest font-bold">{label}</p>
-                        <p className="text-sm md:text-base">{['John Ardem Matriano', 'Jhowell Dineros', 'Jayson Sevilla'][idx]}</p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
+            <div className="flex justify-center max-w-2xl mx-auto">
               <div className="space-y-6">
                 <div>
-                    <h3 className="text-wildflower-pink font-serif text-xl italic mb-2">Flower Girls</h3>
-                    <div className="space-y-0.5 text-gray-800 font-serif italic text-sm md:text-base leading-tight">
+                    <h3 className="text-wildflower-pink font-serif text-xl md:text-2xl italic mb-3">Flower Girls</h3>
+                    <div className="space-y-1 text-gray-800 font-serif italic text-base md:text-lg leading-tight">
                         <p>Ericka Jannelle Saromines</p>
                         <p>Reign Naomi Mojar</p>
                         <p>Marfaye Mendoza</p>
@@ -216,16 +213,16 @@ const Entourage: React.FC = () => {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-2">
+                <div className="grid grid-cols-2 gap-6 pt-4 border-t border-gray-50">
                     <div>
-                        <h4 className="text-[8px] text-gray-400 uppercase tracking-widest font-bold leading-tight mb-1">"Here Comes the Groom"</h4>
-                        <p className="text-xs text-gray-800 font-serif italic leading-tight">Danerick Dj Mojar</p>
-                        <p className="text-xs text-gray-800 font-serif italic leading-tight">Shadmier Aseniero</p>
+                        <h4 className="text-[8px] md:text-[10px] uppercase tracking-widest text-gray-400 font-bold leading-tight mb-2">"Here Comes the Groom"</h4>
+                        <p className="text-sm text-gray-800 font-serif italic leading-tight">Danerick Dj Mojar</p>
+                        <p className="text-sm text-gray-800 font-serif italic leading-tight">Shadmier Aseniero</p>
                     </div>
                     <div>
-                        <h4 className="text-[8px] text-gray-400 uppercase tracking-widest font-bold leading-tight mb-1">"Here Comes the Bride"</h4>
-                        <p className="text-xs text-gray-800 font-serif italic leading-tight">Mavy Mendoza</p>
-                        <p className="text-xs text-gray-800 font-serif italic leading-tight">Alora Mojar</p>
+                        <h4 className="text-[8px] md:text-[10px] uppercase tracking-widest text-gray-400 font-bold leading-tight mb-2">"Here Comes the Bride"</h4>
+                        <p className="text-sm text-gray-800 font-serif italic leading-tight">Mavy Mendoza</p>
+                        <p className="text-sm text-gray-800 font-serif italic leading-tight">Alora Mojar</p>
                     </div>
                 </div>
               </div>
