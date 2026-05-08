@@ -20,7 +20,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "What is the gift preference?",
-      answer: "Your presence at our wedding is the greatest gift of all. However, if you wish to honor us with a gift, a contribution towards our future home would be sincerely appreciated."
+      answer: "Your presence is our greatest gift. However, should you wish to give, a monetary gift is sincerely appreciated."
     }
   ];
 
