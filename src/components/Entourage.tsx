@@ -26,11 +26,11 @@ const Entourage: React.FC = () => {
     },
     {
       role: 'Parents of the Groom',
-      members: ['Mr Danny Sulit and Ms Mariedel Aseniero']
+      members: ['Mr. Danny Sulit and Ms. Mariedel Aseniero']
     },
     {
       role: 'Parents of the Bride',
-      members: ['Mr Roderick Saromines and Mrs Bella Saromines']
+      members: ['Mr. Roderick Saromines and Mrs. Bella Saromines']
     },
     {
       role: 'Principal Sponsors',
